@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* responsive */
+@media screen and (max-width: 720px){
+
+   .medsos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+    .subJudul, .judulArt{
+        text-align: center;
+    }
+}
+
+header.navbar {
+    width: auto;
+    height: 80px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-block: 1rem;
+    z-index: 999;
+}
+
+header.navbar .navlist ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem .9rem;
+}
+
+header.navbar .navlist li {
+    list-style-type: none;
+}
+
+header.navbar .navlist li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem .8rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar .navlist li:hover a {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+}
+
+main {
+    padding: 4.5rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.home1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.judulArt {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 2rem;
+}
+
+.linkCv {
+    text-decoration: none;
+    color: black;
+    border-style: groove;
+    border-color: black;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-width: 1px;
+}
+
+.foto {
+    width: 80%;
+    height: 95%;
+    object-fit: cover;
+}
+
+.subJudul {
+    color: gray;
+}
+
+.desc {
+    text-align: justify;
+    font-size: 1.2rem;
+    opacity: 0.71;
+    text-indent: 50px;
+}
+
+.collapse {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: justify;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapse:after {
+    content: '\02795';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\2796';
+}
+
+.active {
+    background-color: gray;
+}
+
+.collapse:hover {
+    background-color: gray;
+    color: white;
+}
+
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #eee;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+#Experiences {
+    text-align: justify;
+}
+
+.divider {
+    display: flex;
+    flex-direction: column;
+}
+
+.certification {
+    width: 30rem;
+}
+
+.vertikalLine {
+    height: 550px;
+    width: 1px;
+    color: black;
+    background-color: #000;
+}
+
+.linkCer {
+    text-decoration: none;
+    color: black;
+    border-style: groove;
+    border-color: black;
+    padding: 3px 15px;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 13rem;
+}
+
+.linkCer:hover {
+    color: white;
+    background-color: gray;
+    font-weight: bold;
+}
+
+.faLight {
+    color: black;
+}
+
+/* card */
+.container {
+    width: 1200vh !important;
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 720px) and (max-width: 1439px) {
+        max-width: 1279px !important;
+        padding: 0 !important;
+        margin: 0 80px !important;
+        width: auto !important;
+    }
+
+    @media screen and (max-width: 720px) {
+        max-width: 959px !important;
+        margin: 0 16px !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+}
+
+.gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding: 20px;
+
+    @media screen and (max-width: 720px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    max-width: 450px;
+    border: 0;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.container-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 30px;
+}
+
+.bg-green-box,
+.bg-white-box,
+.bg-yellow-box,
+.bg-blue-box {
+    position: relative;
+}
+
+.bg-green-box::after,
+.bg-white-box::after,
+.bg-yellow-box::after,
+.bg-blue-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+}
+
+.bg-green-box::after {
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+
+.bg-white-box::after {
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+}
+
+.bg-yellow-box::after {
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+}
+
+.bg-blue-box::after {
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+}
+
+.card-title {
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-size: 25px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.card-description {
+    font-weight: 600;
+    line-height: 32px;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 16px;
+    max-width: 470px;
+}
+
+/* medsos */
+.fa {
+    padding: 20px;
+    font-size: 5rem;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa-linkedin,
+.fa-instagram,
+.fa-github,
+.fa-envelope {
+    background: black;
+    color: white;
+
+}
+
+.fa-linkedin:hover,
+.fa-instagram:hover,
+.fa-github:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+/* animation */
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.actives {
+    transform: translateY(0);
+    opacity: 1;
+};
+
